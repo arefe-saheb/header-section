@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/****************************HEADER***************************/
+.first-line{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7dadd;
+}
+
+.first-line > div > ul li{
+    list-style: none;
+    color: #a7b0ba;
+    display: inline-block;
+    padding: 14px;
+    border-right: 1px solid #a7b0ba;
+    opacity: 0.5;
+    border-collapse:collapse ;
+}
+
+.select{
+    border: none;
+    cursor: pointer;
+    color: #a7b0ba;
+    font-size: 12px;
+    align-items: center;
+}
+
+ul > li > a{
+    text-decoration: none;
+    color: #a7b0ba;
+}
+
+ul > li > a:hover{
+    text-decoration: underline;
+}
+
+ul > li > a > img{
+    height : 18px;
+    width : 18px;
+}
+
+/**************************SECOND HEADER****************************/
+.second-line{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 24px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 10000000000;
+}
+
+.second-line > div > ul li{
+    display: inline-block;
+    padding: 16px;
+}
+
+.right-sec > a{
+    text-decoration: none;
+    color: #1b1e20;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.right-sec > a > span{
+    color: #ff545a;
+}
+
+.left-sec > ul > li > a:hover{
+    text-decoration: none;
+    color: #ff545a;
+    transition: 0.5s;
+}
+
+/**********************MAIN****************************/
+
+.hero-section{
+    position: relative;
+    background-image:url("../img/banner.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.hero-text > h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color:white;
+    line-height: 1.4;
+    letter-spacing: 2.4px;
+    padding-top:124px ;
+    animation-name: moveTop;
+    animation-duration: 2s;
+}
+
+.hero-text > p{
+    font-size: 18px;
+    color: #fcfcfc;
+    margin-top: 24px;
+    animation-name: moveTop;
+    animation-duration: 2s;
+}
+
+/**********************INPUT************************/
+
+.input-section{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 25px;
+    margin: 30px;
+    animation-name: moveBottom;
+    animation-duration: 2s
+}
+
+.smaller{
+    width: 80px;
+    height: 60px;
+    font-size: large;
+    outline: none;
+    border: none;
+}
+
+.bigger{
+    width: 250px;
+    height: 60px;
+    border: none;
+}
+
+.input-section > button{
+    padding: 25px;
+    background-color: #ff545a;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    margin-left: 100px;
+    height: 60px;
+}
+
+.fa-list-ul,
+.fa-crosshairs{
+    position: relative;
+    left: -20px;
+    top: 21px;
+}
+
+.input-section > button:hover{
+    background-color: #da3036;
+    transition: 1s;
+}
+
+.input-section > button > i{
+    z-index: 10000000;
+}
+/**************************** BOTTOM BOX**************************/
+.bottom-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom-box > div{
+    position: relative;
+    top: -70px;
+    background-color: white;
+    padding: 60px;
+    line-height: 30px;
+    text-align: center;
+
+}
+
+.bottom-box > div > a{
+    text-decoration: none;
+    color: #515557;
+}
+
+.bottom-box > div > p{
+    color: #878b8f;
+}
+
+.bottom-box > div:hover{
+    background-color: #ff545a;
+    transition: 1s;
+}
+
+.bottom-box > div > a:hover{
+    color: white;
+}
+
+.big{
+    font-size: 26px;
+    color:#363b3f ;
+    font-weight: bold;
+    text-align: center;
+    line-height: 64px;
+}
+
+.small{
+    font-size: 20px;
+    color: #878b8f;
+    text-align: center;
+    font-weight: lighter;
+}
+/***************************menu2******************************/
+.fa-align-justify{
+    float: left;
+    padding: 5px;
+    display: none;
+    color: #da3036;
+    border: 1px solid #da3036;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#menu-container{
+    height: fit-content;
+}
+
+.active{
+    display: none;
+    height: auto !important;
+}
+/***********************ANIMATION***********************/
+@keyframes moveTop {
+    0%{
+        transform: translate(0,0);
+    }
+
+    100%{
+        transform: translate(0,-20px);
+    }
+}
+
+@keyframes moveBottom {
+    0%{
+        transform: translate(0,0);
+    }
+
+    100%{
+        transform: translate(0,20px);
+    }
+}
+
+/*****************************Responsive******************************/
+
+@media screen and (min-width:0) and (max-width:480px) {
+
+    .fa-align-justify{
+        display: block;
+    }
+
+    .leftBox{
+        display: none;
+    }
+    
+    .first-line > div > ul li{
+        padding: 0;
+    }    
+        
+    .second-line{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-sec > a{
+        margin-left: 180px;
+    }
+
+    .hero-text > h1{
+        font-size: 24px;
+        padding-top: 50px;
+    }
+    .hero-text > p{
+        font-size: 12px;
+    }
+
+    .input-section {
+        display: block;
+    }
+
+    .bottom-box{
+        display: block;
+    }
+
+    .bottom-box > div{
+        top: 70px;
+        padding: 0;
+        margin: 32px;
+        border: 1px solid white;
+        box-shadow: 2px 2px 2px 2px #bdc0c2;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:780px) {
+
+    .fa-align-justify{
+        display: block;
+    }
+
+    .leftBox{
+        display: none;
+    }
+    
+    .first-line > div > ul li{
+        padding: 0;
+    }    
+
+    .second-line{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-sec > a{
+        margin-left: 180px;
+    }
+
+    .hero-text > h1{
+        font-size: 30px;
+        padding-top: 70px;
+    }
+    .hero-text > p{
+        font-size: 15px;
+    }
+
+    .input-section{
+        margin: 12px;
+        display: block;
+    }
+
+    .bottom-box{
+        display: block;
+    }
+
+    .bottom-box > div{
+        top: 70px;
+        padding: 0;
+        margin: 32px;
+        border: 1px solid white;
+        box-shadow: 2px 2px 2px 2px #bdc0c2;
+    }
+}
